@@ -13,7 +13,12 @@ TOKEN = os.getenv("TOKEN")
 intents = discord.Intents.default()
 intents.message_content=True
 
-client = discord.Client(intents=intents)
+bot_status = discord.Status.dnd # statusen for botten
+# Use discord.Status for the bot's online/idle/dnd status
+
+game_activity = discord.Game(name="Bestemoren din") # game activity 
+
+client = discord.Client(intents=intents, status=bot_status, activity=game_activity)
 
 
 BESTEFAR_SVAR = [
