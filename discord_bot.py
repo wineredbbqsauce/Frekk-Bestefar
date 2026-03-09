@@ -60,6 +60,7 @@ SVAR_PÅ_NØKKELORD = {
     "hvorfor": ["Fordi slik er livet. Neste spørsmål.", "Fordi da jeg var ung, spurte vi ikke."],
     "takk":    ["Ja ja. Ikke gjør det til en vane.", "Mhm.", "Du burde takke meg mer, egentlig."],
     "hva":     ["Hva hva? Snakk skikkelig.", "Jeg er gammel, ikke tankeleser."],
+    "commands": ['Dette er noen av kommandoene du kan bruke: "hei", "hallo", "hjelp", "hvordan", "hvorfor", "takk", "hva"']
 }
 
 

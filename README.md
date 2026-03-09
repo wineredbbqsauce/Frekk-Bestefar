@@ -31,3 +31,4 @@ voila
 - @Bestefar hvorfor
 - @Bestefar takk
 - @Bestefar hva
+- @Bestefar commands
