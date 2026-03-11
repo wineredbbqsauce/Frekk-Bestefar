@@ -75,19 +75,28 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if not client.user.mentioned_in(message):
+    ## Sjekker om botten ble tagget direkte. IGNORERER @everyone & @here
+    was_mentioned = any(user.id == client.user.id for user in message.mentions)
+
+    ## Sekker om det er et svar (reply) på bottens tidligere melding
+    is_reply_to_me = False
+    if message.reference and message.reference.resolved:
+        # sjekker om botten selv sendte meldingen
+        is_reply_to_me = message.reference.resolved.author.id == client.user.id
+    
+    ## Hvis ingen av delene stemmer, drit i det (akk som en ekte bestefar)
+    if not (was_mentioned or is_reply_to_me):
         return
     
-    innhold = message.content.replace(f"<@{client.user.id}>", "").strip().lower()
+    innhold = message.content.replace(f"<@{client.user.id}>", "").replace(f"<@!{client.user.id}>", "").strip().lower()
 
-    # Sjekk nøkkelord
+    # Sjekk nøkkelord - gå gjennom ordboken
     for nøkkelord, svar_liste in SVAR_PÅ_NØKKELORD.items():
         if isinstance(nøkkelord, tuple):
             if any(n in innhold for n in nøkkelord):
                 await message.reply(random.choice(svar_liste))
                 return
-    else:
-        if nøkkelord in innhold:
+        elif nøkkelord in innhold:
             await message.reply(random.choice(svar_liste))
             return
     
