@@ -65,7 +65,8 @@ SVAR_PÅ_NØKKELORD = {
     "hvorfor": ["Fordi slik er livet. Neste spørsmål.", "Fordi da jeg var ung, spurte vi ikke."],
     "takk":    ["Ja ja. Ikke gjør det til en vane.", "Mhm.", "Du burde takke meg mer, egentlig."],
     "hva":     ["Hva hva? Snakk skikkelig.", "Jeg er gammel, ikke tankeleser."],
-    "commands": ['Dette er noen av kommandoene du kan bruke: "hei", "hallo", "hjelp", "hvordan", "hvorfor", "takk", "hva"']
+    ("commands", "kommandoer", "kommando"): ['Dette er noen av kommandoene du kan bruke: "hei", "hallo", "hjelp", "hvordan", "hvorfor", "takk", "hva", "sondre'],
+    ("sondre", "mening om sondre?"): ["https://tenor.com/view/nrk-førstegangstjenesten-nrk-tv-herman-flesvig-paul-jefferson-gif-23915395"]
 }
 
 
@@ -81,11 +82,16 @@ async def on_message(message):
 
     # Sjekk nøkkelord
     for nøkkelord, svar_liste in SVAR_PÅ_NØKKELORD.items():
+        if isinstance(nøkkelord, tuple):
+            if any(n in innhold for n in nøkkelord):
+                await message.reply(random.choice(svar_liste))
+                return
+    else:
         if nøkkelord in innhold:
             await message.reply(random.choice(svar_liste))
             return
     
-    # Fallback hvis ingen nøkkelord mathcer
+    ## Fallback hvis ingen nøkkelord matcher
     await message.reply(random.choice(BESTEFAR_SVAR))
 
 client.run(TOKEN)
