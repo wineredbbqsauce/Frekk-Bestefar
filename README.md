@@ -1,24 +1,62 @@
 # Din frekke bestefar har nå blitt digital
 
-## Setup
+![](./akward_smiling_man_memeb.jpg)
 
-Endre "_your token_" til din faktiske [discord bot token](https://discord.com/developers/applications)
+# Setup
+
+### Kopier git filen
+
+```bash
+git clone https://github.com/wineredbbqsauce/Frekk-Bestefar.git
+```
 
 ---
 
-```bash
+### Last ned venv og aktiver det:
+
+```python
+python3 -m venv .venv
+```
+
+**Windows Command Prompt (CMD):** .\.venv\Scripts\activate.bat
+
+---
+
+Windows PowerShell: **.\.venv\Scripts\Activate.ps1**
+
+---
+
+**Windows Git Bash / WSL:** source .venv/Scripts/activate
+
+---
+
+macOS / Linux ---- Bash / Zsh: **source .venv/bin/activate**
+
+---
+
+### Installer nødvendigheter
+
+```python
 pip install -r requirements.txt
 ```
 
-```bash
-python discord_bot.py
+---
+
+### Endre fil
+
+Endre "_your token_" til din faktiske [discord bot token](https://discord.com/developers/applications) i **_.env_** filen
+
+---
+
+### Start botten
+
+```python
+python3 discord_bot.py
 ```
 
 ---
 
-voila
-
----
+# _voila_
 
 ## Commands
 
