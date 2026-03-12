@@ -65,7 +65,7 @@ SVAR_PÅ_NØKKELORD = {
     "hvorfor": ["Fordi slik er livet. Neste spørsmål.", "Fordi da jeg var ung, spurte vi ikke."],
     "takk":    ["Ja ja. Ikke gjør det til en vane.", "Mhm.", "Du burde takke meg mer, egentlig."],
     "hva":     ["Hva hva? Snakk skikkelig.", "Jeg er gammel, ikke tankeleser."],
-    ("commands", "kommandoer", "kommando"): ['Dette er noen av kommandoene du kan bruke: "hei", "hallo", "hjelp", "hvordan", "hvorfor", "takk", "hva", "sondre'],
+    ("commands", "kommandoer", "kommando"): ['Dette er noen av kommandoene du kan bruke: "hei", "hallo", "hjelp", "hvordan", "hvorfor", "takk", "hva", "sondre"'],
     ("sondre", "mening om sondre?"): ["https://tenor.com/view/nrk-førstegangstjenesten-nrk-tv-herman-flesvig-paul-jefferson-gif-23915395"]
 }
 
