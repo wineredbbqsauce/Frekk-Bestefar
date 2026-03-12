@@ -79,10 +79,8 @@ fi
 
 echo ""
 
-echo "Installerer nødvendigheter"
+echo -e "${YELLOW}Installerer nødvendigheter${NC}"
 
-echo ""
-echo ""
 echo ""
 
 echo "Installerer discord"
