@@ -2,7 +2,7 @@
 
 ![](./akward_smiling_man_memeb.jpg)
 
-# Setup
+# Setup 🤖⚙️⚡
 
 ### Kopier git filen
 
@@ -10,7 +10,41 @@
 git clone https://github.com/wineredbbqsauce/Frekk-Bestefar.git
 ```
 
+### Endre .env filen
+
+```.env
+Endre "your_token" til din discord bot token
+```
+
+[Discord Bot Token](https://discord.com/developers/applications)
+
 ---
+
+# Automagisk setup 🔄</>🖥️⚙️
+
+_For UNIX-like enviroments, like LInux / macOS_
+
+### Tillat setup
+
+```bash
+chmod +x  ./setup.sh
+```
+
+### Kjør setup
+
+```bash
+./setup.sh
+```
+
+Det kan være at man må bruke _sudo_ for å kjøre filen.
+
+Hvis den feiler og sier: _permission denied_. (eller noe liknende)
+
+Kjør **sudo ./setup.sh** - Skriv inn passordet ditt her
+
+---
+
+# Manuell setup ⚙️ 🛠️🚧🏗️ ✍
 
 ### Last ned venv og aktiver det:
 
@@ -44,7 +78,7 @@ pip install -r requirements.txt
 
 ### Endre fil
 
-Endre "_your token_" til din faktiske [discord bot token](https://discord.com/developers/applications) i **_.env_** filen
+Endre "_your \_token_" til din faktiske [discord bot token](https://discord.com/developers/applications) i **_.env_** filen
 
 ---
 
@@ -70,3 +104,15 @@ python3 discord_bot.py
 - @Bestefar takk
 - @Bestefar hva
 - @Bestefar commands
+
+---
+
+Husk at du må ha [python](https://python.org) lastet ned for at prosjektet skal fungere
+
+---
+
+###### Built with ❤️, caffeine ☕, and questionable decisions
+
+© 0
+
+Made by BBQ Sauce Inc. Coop. Com. Org. Net.
