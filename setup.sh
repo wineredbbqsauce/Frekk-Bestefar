@@ -104,19 +104,6 @@ else
 fi
 
 echo ""
-
-echo "Installerer audioop-lts"
-pip install audioop-lts
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}Installerte audioop-lts${NC}"
-else
-    echo -e "${RED}Klarte ikke installere${NC}"
-    exit 1
-fi
-
-echo ""
-
-echo ""
 echo -e "${GREEN}======================================"
 echo "Alt installert! Vekker opp bestefar"
 echo "======================================${NC}"
